@@ -1,0 +1,22 @@
+.header {
+    height: 100vh;
+    &__top-bar {
+        background-color: $top-bar-bckg;
+        height: 5rem;
+        .contents {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__navlinks {
+            display: none;
+        }
+        &__clickable-icons {
+            display: flex;
+            &__icon {
+                cursor: pointer;
+            }
+        }
+    }
+}

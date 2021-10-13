@@ -1,0 +1,19 @@
+// ---------- BASE ----------
+// GLOBAL
+body {
+    background-color: lighten($top-bar-bckg, 10%);
+}
+// LINKS
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: $main-txt-clr;
+    &:active, &:visited {
+        color: $main-txt-clr;
+    }
+}
+// CONTENTS
+.contents {
+    width: 90%;
+    margin: 0 auto;
+}
