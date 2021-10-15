@@ -1,6 +1,10 @@
 // ---------- VARIABLES ----------
+// SIZING
+$default-size: 16px;
 // FONTS
+$default-font: 'Rubik', sans-serif;
 // PALETTE
 $top-bar-bckg: #000;
 $main-txt-clr: #fff;
-$highlight: #e1901b;
+$paragraph-clr: darken($main-txt-clr, 30%);
+$highlight: #00ff9d;

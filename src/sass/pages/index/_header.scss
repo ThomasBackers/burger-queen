@@ -1,0 +1,71 @@
+.header {
+    &__slider {
+        &__promoted-burger {
+            text-align: center;
+            &:nth-child(1), &:nth-child(3) {
+                display: none;
+            }
+            &__type, &__heading, &__description, &__order-now {
+                margin-bottom: 2 * $default-size;
+            }
+            &__figure {
+                img {
+                    width: 60%;
+                }
+            }
+            &__type {
+                text-transform: capitalize;
+            }
+            &__heading {
+                font-size: 2rem;
+                font-weight: 700;
+                &::first-letter, strong {
+                    text-transform: capitalize;
+                }
+                strong {
+                    font-size: 2.3rem;
+                    color: $highlight;
+                }
+            }
+            &__description {
+                line-height: 1.5rem;
+                color: $paragraph-clr;
+            }
+            &__order-now {
+                background-color: $highlight;
+                padding: 1rem 2rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: $top-bar-bckg;
+                &:active, &:visited {
+                    color: $top-bar-bckg
+                }
+            }
+        }
+        &__controller {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__decoration, &__button {
+                background-color: $paragraph-clr;
+            }
+            &__decoration {
+                width: 5 * $default-size;
+                height: 1px;
+            }
+            &__button {
+                width: 0.8 * $default-size;
+                height: 0.8* $default-size;
+                border-radius: 50%;
+                cursor: pointer;
+                margin-right: 0.5 * $default-size;
+                &:nth-child(2) {
+                    margin-left: 0.5 * $default-size;
+                }
+            }
+            .--active {
+                background-color: $highlight;
+            }
+        }
+    }
+}

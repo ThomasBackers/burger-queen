@@ -1,21 +1,33 @@
 .header {
-    height: 100vh;
+    min-height: 100vh;
     &__top-bar {
         background-color: $top-bar-bckg;
-        height: 5 * 16px;
+        height: 5 * $default-size;
         .contents {
             height: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+        &__logo-link {
+            height: 80%;
+            img {
+                height: 100%;
+            }
+        }
         &__navlinks {
             display: none;
         }
         &__clickable-icons {
             display: flex;
+            justify-content: space-between;
+            width: 7 * $default-size;
             &__icon {
                 cursor: pointer;
+                font-size: 1.6 * $default-size;
+                &:active {
+                    color: $highlight;
+                }
             }
         }
     }

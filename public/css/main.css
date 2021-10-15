@@ -1,3 +1,7 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,12 +52,12 @@ table {
 }
 
 body {
-  background-color: #121212;
+  background-color: #1a1a1a;
 }
 
 .contents {
   width: 90%;
-  max-width: 1920px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -68,11 +72,12 @@ a, a:active, a:visited {
 
 :root {
   font-size: 16px;
+  font-family: "Rubik", sans-serif;
   color: #fff;
 }
 
 .header {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .header__top-bar {
@@ -93,6 +98,14 @@ a, a:active, a:visited {
           align-items: center;
 }
 
+.header__top-bar__logo-link {
+  height: 80%;
+}
+
+.header__top-bar__logo-link img {
+  height: 100%;
+}
+
 .header__top-bar__navlinks {
   display: none;
 }
@@ -101,8 +114,105 @@ a, a:active, a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 112px;
 }
 
 .header__top-bar__clickable-icons__icon {
   cursor: pointer;
+  font-size: 25.6px;
+}
+
+.header__top-bar__clickable-icons__icon:active {
+  color: #00ff9d;
+}
+
+.header__slider__promoted-burger {
+  text-align: center;
+}
+
+.header__slider__promoted-burger:nth-child(1), .header__slider__promoted-burger:nth-child(3) {
+  display: none;
+}
+
+.header__slider__promoted-burger__type, .header__slider__promoted-burger__heading, .header__slider__promoted-burger__description, .header__slider__promoted-burger__order-now {
+  margin-bottom: 32px;
+}
+
+.header__slider__promoted-burger__figure img {
+  width: 60%;
+}
+
+.header__slider__promoted-burger__type {
+  text-transform: capitalize;
+}
+
+.header__slider__promoted-burger__heading {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header__slider__promoted-burger__heading::first-letter, .header__slider__promoted-burger__heading strong {
+  text-transform: capitalize;
+}
+
+.header__slider__promoted-burger__heading strong {
+  font-size: 2.3rem;
+  color: #00ff9d;
+}
+
+.header__slider__promoted-burger__description {
+  line-height: 1.5rem;
+  color: #b3b3b3;
+}
+
+.header__slider__promoted-burger__order-now {
+  background-color: #00ff9d;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #000;
+}
+
+.header__slider__promoted-burger__order-now:active, .header__slider__promoted-burger__order-now:visited {
+  color: #000;
+}
+
+.header__slider__controller {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__slider__controller__decoration, .header__slider__controller__button {
+  background-color: #b3b3b3;
+}
+
+.header__slider__controller__decoration {
+  width: 80px;
+  height: 1px;
+}
+
+.header__slider__controller__button {
+  width: 12.8px;
+  height: 12.8px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.header__slider__controller__button:nth-child(2) {
+  margin-left: 8px;
+}
+
+.header__slider__controller .--active {
+  background-color: #00ff9d;
 }
