@@ -21,10 +21,10 @@
         &__clickable-icons {
             display: flex;
             justify-content: space-between;
-            width: 7 * $default-size;
+            width: 6.5 * $default-size;
             &__icon {
                 cursor: pointer;
-                font-size: 1.6 * $default-size;
+                font-size: 1.5 * $default-size;
                 &:active {
                     color: $highlight;
                 }

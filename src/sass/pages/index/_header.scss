@@ -1,25 +1,46 @@
 .header {
+    display: flex;
+    flex-direction: column;
     &__slider {
+        margin: auto 0;
+        padding-bottom: 1.9 * $default-size;
         &__promoted-burger {
             text-align: center;
-            &:nth-child(1), &:nth-child(3) {
+            &:nth-child(2),
+            &:nth-child(3) {
                 display: none;
             }
-            &__type, &__heading, &__description, &__order-now {
-                margin-bottom: 2 * $default-size;
+            &__type,
+            &__heading,
+            &__description,
+            &__order-now {
+                margin-bottom: 1.9 * $default-size;
             }
             &__figure {
                 img {
-                    width: 60%;
+                    width: 55%;
                 }
             }
             &__type {
+                display: inline-block;
                 text-transform: capitalize;
+                border-radius: 20px;
+                padding: 0.5rem 1rem;
+                font-weight: 600;
+                font-size: 0.9rem;
+            }
+            // BURGER TYPE FLAGS
+            .--cheesy {
+                background-color: $cheesy-clr;
+            }
+            .--spicy {
+                background-color: $spicy-clr;
             }
             &__heading {
                 font-size: 2rem;
                 font-weight: 700;
-                &::first-letter, strong {
+                &::first-letter,
+                strong {
                     text-transform: capitalize;
                 }
                 strong {
@@ -37,8 +58,9 @@
                 text-transform: uppercase;
                 font-weight: 600;
                 color: $top-bar-bckg;
-                &:active, &:visited {
-                    color: $top-bar-bckg
+                &:active,
+                &:visited {
+                    color: $top-bar-bckg;
                 }
             }
         }
@@ -46,7 +68,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            &__decoration, &__button {
+            &__decoration,
+            &__button {
                 background-color: $paragraph-clr;
             }
             &__decoration {
@@ -55,14 +78,15 @@
             }
             &__button {
                 width: 0.8 * $default-size;
-                height: 0.8* $default-size;
+                height: 0.8 * $default-size;
                 border-radius: 50%;
                 cursor: pointer;
-                margin-right: 0.5 * $default-size;
+                margin-right: 0.8 * $default-size;
                 &:nth-child(2) {
-                    margin-left: 0.5 * $default-size;
+                    margin-left: 0.8 * $default-size;
                 }
             }
+            // ACTIVE BUTTON FLAG
             .--active {
                 background-color: $highlight;
             }
