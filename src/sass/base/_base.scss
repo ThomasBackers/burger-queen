@@ -1,7 +1,7 @@
 // ---------- BASE ----------
 // GLOBAL
 body {
-    background-color: lighten($top-bar-bckg, 10%);
+    background-color: $body-bckg;
 }
 .contents {
     width: 90%;

@@ -78,7 +78,7 @@ a, a:active, a:visited {
 
 .header__top-bar {
   background-color: #000;
-  height: 80px;
+  height: 5rem;
 }
 
 .header__top-bar .contents {
@@ -113,12 +113,12 @@ a, a:active, a:visited {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 104px;
+  width: 6.5rem;
 }
 
 .header__top-bar__clickable-icons__icon {
   cursor: pointer;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .header__top-bar__clickable-icons__icon:active, .header__top-bar__clickable-icons__icon:hover {
@@ -138,7 +138,7 @@ a, a:active, a:visited {
 
 .header__slider {
   margin: auto 0;
-  padding-bottom: 30.4px;
+  padding-bottom: 1.9rem;
 }
 
 .header__slider__promoted-burger {
@@ -150,7 +150,7 @@ a, a:active, a:visited {
 }
 
 .header__slider__promoted-burger__type, .header__slider__promoted-burger__heading, .header__slider__promoted-burger__description, .header__slider__promoted-burger__order-now {
-  margin-bottom: 30.4px;
+  margin-bottom: 1.9rem;
 }
 
 .header__slider__promoted-burger__figure img {
@@ -223,24 +223,30 @@ a, a:active, a:visited {
 }
 
 .header__slider__controller__decoration {
-  width: 80px;
+  width: 5rem;
   height: 1px;
 }
 
 .header__slider__controller__button {
-  width: 12.8px;
-  height: 12.8px;
+  width: 0.8rem;
+  height: 0.8rem;
   border-radius: 50%;
   cursor: pointer;
-  margin-right: 12.8px;
+  margin-right: 0.8rem;
 }
 
 .header__slider__controller__button:nth-child(2) {
-  margin-left: 12.8px;
+  margin-left: 0.8rem;
 }
 
 .header__slider__controller .--active {
   background-color: #00ff9d;
+}
+
+@media all and (min-width: 768px) {
+  .header__slider {
+    padding-bottom: 0;
+  }
 }
 
 @media all and (min-width: 1024px) {
@@ -264,6 +270,15 @@ a, a:active, a:visited {
   }
   .header__slider__promoted-burger__text-content {
     max-width: 480px;
-    margin: auto 0;
+    margin: auto 0 auto 1%;
+  }
+  .header__slider__promoted-burger__heading {
+    font-size: 2.5rem;
+  }
+  .header__slider__promoted-burger__heading strong {
+    font-size: 3rem;
+  }
+  .header__slider__controller {
+    padding-top: 1.5rem;
   }
 }

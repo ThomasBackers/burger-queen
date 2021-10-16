@@ -5,6 +5,7 @@ $default-size: 16px;
 $default-font: 'Rubik', sans-serif;
 // PALETTE
 $top-bar-bckg: #000;
+$body-bckg: lighten($top-bar-bckg, 10%);
 $main-txt-clr: #fff;
 $paragraph-clr: darken($main-txt-clr, 30%);
 $highlight: #00ff9d;
