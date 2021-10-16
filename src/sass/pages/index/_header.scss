@@ -1,6 +1,10 @@
-.header {
+// HOME HEADER FLAG
+.--home {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+.header {
     &__slider {
         margin: auto 0;
         padding-bottom: 1.9 * $default-size;
@@ -89,6 +93,31 @@
             // ACTIVE BUTTON FLAG
             .--active {
                 background-color: $highlight;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .header {
+        &__slider {
+            &__promoted-burger {
+                display: flex;
+                text-align: left;
+                &__figure, &__text-content {
+                    width: 50%;
+                }
+                &__figure {
+                    display: flex;
+                    img {
+                        width: 70%;
+                        margin: auto;
+                    }
+                }
+                &__text-content {
+                    max-width: 480px;
+                    margin: auto 0;
+                }
             }
         }
     }

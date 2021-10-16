@@ -1,5 +1,4 @@
 .header {
-    min-height: 100vh;
     &__top-bar {
         background-color: $top-bar-bckg;
         height: 5 * $default-size;
@@ -25,7 +24,7 @@
             &__icon {
                 cursor: pointer;
                 font-size: 1.5 * $default-size;
-                &:active {
+                &:active, &:hover {
                     color: $highlight;
                 }
             }
