@@ -121,8 +121,71 @@ a, a:active, a:visited {
   font-size: 1.5rem;
 }
 
-.header__top-bar__clickable-icons__icon:active, .header__top-bar__clickable-icons__icon:hover {
+.header__top-bar__clickable-icons__icon:hover, .header__top-bar__clickable-icons__icon:active {
   color: #00ff9d;
+}
+
+.header__side-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__side-menu__plain-content {
+  width: 65%;
+  background-color: #1a1a1a;
+}
+
+.header__side-menu__side-void {
+  width: 35%;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.header__side-menu__navlinks__navlink {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1.2rem;
+  border-bottom: 1px solid #333333;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.header__side-menu__navlinks__navlink:hover, .header__side-menu__navlinks__navlink:active {
+  color: #00ff9d;
+}
+
+@media all and (min-width: 1024px) {
+  .header__top-bar__navlinks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+  .header__top-bar__navlinks__navlink {
+    padding: 1.2rem;
+    font-size: 0.9rem;
+  }
+  .header__top-bar__navlinks__navlink:hover {
+    color: #00ff9d;
+  }
+  .header__top-bar__clickable-icons {
+    width: 4.5rem;
+  }
+  .header__top-bar__clickable-icons__element:nth-child(3) {
+    display: none;
+  }
+  .header__side-menu {
+    display: none;
+  }
 }
 
 .--home {
@@ -134,6 +197,10 @@ a, a:active, a:visited {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.header {
+  overflow: hidden;
 }
 
 .header__slider {
@@ -244,12 +311,20 @@ a, a:active, a:visited {
 }
 
 @media all and (min-width: 768px) {
-  .header__slider {
-    padding-bottom: 0;
+  .header__slider__promoted-burger__figure img {
+    max-width: 354px;
   }
 }
 
 @media all and (min-width: 1024px) {
+  .--home {
+    min-height: initial;
+    height: 100vh;
+    max-height: 1080px;
+  }
+  .header__slider {
+    padding-bottom: 0;
+  }
   .header__slider__promoted-burger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -266,6 +341,7 @@ a, a:active, a:visited {
   }
   .header__slider__promoted-burger__figure img {
     width: 70%;
+    max-width: initial;
     margin: auto;
   }
   .header__slider__promoted-burger__text-content {

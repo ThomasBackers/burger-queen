@@ -24,10 +24,69 @@
             &__icon {
                 cursor: pointer;
                 font-size: 1.5rem;
-                &:active, &:hover {
+                &:hover, &:active {
                     color: $highlight;
                 }
             }
+        }
+    }
+    &__side-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        &__plain-content {
+            width: 65%;
+            background-color: $body-bckg;
+        }
+        &__side-void {
+            width: 35%;
+            background-color: $top-bar-bckg;
+            opacity: 0.6;
+        }
+        &__navlinks {
+            &__navlink {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 1.2rem;
+                border-bottom: 1px solid darken($paragraph-clr, 50%);
+                text-transform: capitalize;
+                font-weight: 600;
+                font-size: 0.9rem;
+                &:hover, &:active {
+                    color: $highlight;
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .header {
+        &__top-bar {
+            &__navlinks {
+                display: flex;
+                text-transform: capitalize;
+                font-weight: 600;
+                &__navlink {
+                    padding: 1.2rem;
+                    font-size: 0.9rem;
+                    &:hover {
+                        color: $highlight;
+                    }
+                }
+            }
+            &__clickable-icons {
+                width: 4.5rem;
+                &__element:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+        &__side-menu {
+            display: none;
         }
     }
 }

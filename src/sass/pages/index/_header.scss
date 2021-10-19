@@ -5,6 +5,7 @@
     flex-direction: column;
 }
 .header {
+    overflow: hidden;
     &__slider {
         margin: auto 0;
         padding-bottom: 1.9rem;
@@ -101,14 +102,26 @@
 @media all and (min-width: 768px) {
     .header {
         &__slider {
-            padding-bottom: 0;
+            &__promoted-burger {
+                &__figure {
+                    img {
+                        max-width: 354px;
+                    }
+                }
+            }
         }
     }
 }
 
 @media all and (min-width: 1024px) {
+    .--home {
+        min-height: initial;
+        height: 100vh;
+        max-height: 1080px;
+    }
     .header {
         &__slider {
+            padding-bottom: 0;
             &__promoted-burger {
                 display: flex;
                 text-align: left;
@@ -119,6 +132,7 @@
                     display: flex;
                     img {
                         width: 70%;
+                        max-width: initial;
                         margin: auto;
                     }
                 }
