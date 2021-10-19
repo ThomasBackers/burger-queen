@@ -1,9 +1,12 @@
 const sideMenu = document.querySelector(".header__side-menu")
+const sideVoid = sideMenu.querySelector(".header__side-menu__side-void")
 // SHOW SIDE MENU
 document.querySelector(".fa-bars").addEventListener("click", () => {
-    sideMenu.style.transform = "translateX(100%)"
+    sideMenu.style.animation = "show-side-menu 0.25s ease-out forwards"
+    sideVoid.style.animation = "become-opaque 0.125s ease-out 0.25s forwards"
 })
 // HIDE SIDE MENU
-document.querySelector(".header__side-menu__side-void").addEventListener("click", () => {
-    sideMenu.style.transform = ""
+sideVoid.addEventListener("click", event => {
+    sideMenu.style.animation = "hide-side-menu 0.25s ease-in forwards"
+    event.target.style.animation = "become-transparent 0.01s ease-out forwards"
 })
