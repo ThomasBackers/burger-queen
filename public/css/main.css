@@ -265,6 +265,15 @@ a, a:active, a:visited {
   color: #00ff9d;
 }
 
+@media all and (min-width: 768px) {
+  .header__side-menu__plain-content {
+    width: 40%;
+  }
+  .header__side-menu__side-void {
+    width: 60%;
+  }
+}
+
 @media all and (min-width: 1024px) {
   .header__side-menu {
     display: none;
@@ -280,10 +289,6 @@ a, a:active, a:visited {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.header {
-  overflow: hidden;
 }
 
 .header__slider {
